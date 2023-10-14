@@ -52,14 +52,24 @@ body {
 
 .adm{
     position: absolute;
-    right: 30%;
-    top: 76%;
+    right: 20%;
+    top: 77%;
+}
+.nao{
+    position: absolute;
+    right: 24.7%;
+    top: 76.5%;
 }
 
 .adm1{
     position: absolute;
+    right: 33%;
+    top: 77%;
+}
+.sim{
+    position: absolute;
     right: 38%;
-    top: 76%;
+    top: 76.5%;
 }
 .ja{
     text-decoration-line: none;
