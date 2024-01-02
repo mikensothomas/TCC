@@ -9,7 +9,7 @@ body {
 
 .forme {
     position: absolute;
-    right: 36%;
+    right: 40%;
     top: 20%;
     padding: 80pt;
     background-color: rgb(252, 250, 250);
@@ -19,6 +19,7 @@ body {
     position: absolute;
     top: 93%;
     left: 48%;
+    text-decoration-line: none;
 }
 .titulo {
     position: absolute;
