@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url('imagens/drapo.jpeg');
+    background-image: url('../imagens/drapo.jpeg');
     background-repeat: repeat;
 }
 
