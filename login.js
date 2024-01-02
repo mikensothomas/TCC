@@ -1,9 +1,8 @@
-var form = document.getElementById("formulario");
+var formulario_login = document.getElementById("formulario_login");
 
-form.addEventListener("submit", function(event){
+formulario_login.addEventListener("submit", function(event){
     const email = document.getElementById("email").value;
     const senha = document.getElementById("senha").value;
-    const conferirSenha = document.getElementById("conferirSenha").value;
 
     if(email == ""){
         event.preventDefault();
@@ -14,12 +13,6 @@ form.addEventListener("submit", function(event){
     if(senha == ""){
         event.preventDefault();
         alert("Por favor preencha a senha");
-        return false;
-    }
-
-    if(conferirSenha == ""){
-        event.preventDefault();
-        alert("Por favor preencha o campo conferir senha");
         return false;
     }
 });
