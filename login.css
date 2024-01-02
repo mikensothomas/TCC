@@ -56,7 +56,7 @@ body {
     position: absolute;
     top: 90%;
     right: 33%;
-    text-decoration-line: none;
+    cursor: pointer;
 }
 .mensage {
     position: absolute;
