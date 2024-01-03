@@ -15,19 +15,30 @@
         <br>
         <br>
         <label class="nome">E-mail</label><br>
-        <input class="input" type="email" name="email" id="email" placeholder="E-mail"><br><br>
+        <input class="input" type="email" name="email" id="email" placeholder="E-mail" onchange="validate()"><br><br>
         <label class="nome">Senha</label><br>
         <input class="input" type="password" name="senha" id="senha" placeholder="Senha"><br><br>
         <label class="nome">Conferir a senha</label><br>
         <input class="input" type="password" name="senha" id="conferirSenha" placeholder="Conferir a senha"><br><br>
-        <button onclick="salvar()" class="button" type="submit" id="btnSalvar" name="submit">Salvar</button>
+        <button class="button" type="submit" id="btnSalvar" name="submit" disabled="true">Salvar</button>
         <a href="login.html" class="voltar">Voltar</a>
     </form>
 </body>
-<script src="cadastro.js"></script>
-<script src="cadastro_firebase.js"></script>
-<script src="firebase.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
-<script src="firebase_init.js"></script>
+
+<script>
+    function validate(){
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("senha").value;
+        const confirmarsenha = document.getElementById("conferirSenha").value;
+        if(!email){
+            document.getElementById("btnSalvar").desabled = true;
+        } else if(validateEmail(email)){
+            document.getElementById("btnSalvar").desabled = false;
+        }
+    }
+
+    function validateEmail(email) {
+        return /\S+@\S+\.\S+/.test(email);
+    }
+</script>
 </html>
