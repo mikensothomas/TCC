@@ -20,11 +20,14 @@
         <input class="input" type="password" name="senha" id="senha" placeholder="Senha"><br><br>
         <label class="nome">Conferir a senha</label><br>
         <input class="input" type="password" name="senha" id="conferirSenha" placeholder="Conferir a senha"><br><br>
-        <button class="button" type="submit" id="btnSalvar" name="submit">Salvar</button>
+        <button onclick="salvar()" class="button" type="submit" id="btnSalvar" name="submit">Salvar</button>
         <a href="login.html" class="voltar">Voltar</a>
     </form>
 </body>
 <script src="cadastro.js"></script>
+<script src="cadastro_firebase.js"></script>
 <script src="firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+<script src="firebase_init.js"></script>
 </html>

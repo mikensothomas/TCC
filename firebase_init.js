@@ -1,5 +1,3 @@
-import { initializeApp } from 'firebase/app';
-
 const firebaseConfig = {
     apiKey: "AIzaSyBWBaKi39cA7-8RlrQcGQ4aRvRWVHugtjo",
     authDomain: "plataforma-online-tcc.firebaseapp.com",
@@ -8,5 +6,4 @@ const firebaseConfig = {
     messagingSenderId: "609402086727",
     appId: "1:609402086727:web:fd3c428bd2650c3efbd862"
 };
-
 const app = initializeApp(firebaseConfig);
