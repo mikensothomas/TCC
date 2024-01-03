@@ -11,7 +11,7 @@ body {
     position: absolute;
     right: 40%;
     top: 20%;
-    padding: 70pt;
+    padding: 100pt;
     background-color: rgb(252, 250, 250);
     border-radius: 3%;
     height: 31%;
@@ -55,13 +55,13 @@ body {
 .senha {
     position: absolute;
     top: 90%;
-    right: 33%;
+    right: 37%;
     cursor: pointer;
     padding: 0.50pc;
 }
 .cadas{
     position: absolute;
     top: 80%;
-    left: 33%;
+    left: 35%;
     text-decoration-line: none;
 }
