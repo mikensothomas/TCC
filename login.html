@@ -37,4 +37,25 @@
 <script src="index.js"></script>
 <script src="cadastro.html"></script>
 <script src="validation.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyBWBaKi39cA7-8RlrQcGQ4aRvRWVHugtjo",
+        authDomain: "plataforma-online-tcc.firebaseapp.com",
+        projectId: "plataforma-online-tcc",
+        storageBucket: "plataforma-online-tcc.appspot.com",
+        messagingSenderId: "609402086727",
+        appId: "1:609402086727:web:8cea1df2be8895d8fbd862"
+    };
+    firebase.initializeApp(firebaseConfig);
+    console.log('Antes');
+    firebase.auth().signInWithEmailAndPassword("jsdhh@gmai.com", "12345").then(response => {
+        console.log('success', response)
+    }).catch(erro => {
+        console.log('error', error)
+    });
+    console.log("Depois");
+</script>
 </html>
