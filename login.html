@@ -51,9 +51,9 @@
     };
     firebase.initializeApp(firebaseConfig);
     console.log('Antes');
-    firebase.auth().signInWithEmailAndPassword("jsdhh@gmai.com", "12345").then(response => {
-        console.log('success', response)
-    }).catch(erro => {
+    firebase.auth().signInWithEmailAndPassword("jsdhh@gmai.com", "123456").then(respons => {
+        console.log('success', respons)
+    }).catch(error => {
         console.log('error', error)
     });
     console.log("Depois");
