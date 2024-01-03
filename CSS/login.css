@@ -43,7 +43,7 @@ body {
     cursor: pointer;
     position: absolute;
     right: 13%;
-    top: 60%;
+    top: 67%;
     background-color: rgb(183, 183, 218);
     border-radius: 15%;
 }
@@ -61,7 +61,12 @@ body {
 }
 .cadas{
     position: absolute;
-    top: 80%;
+    top: 84%;
     left: 35%;
     text-decoration-line: none;
+}
+
+.error{
+    color: red;
+    display: none;
 }

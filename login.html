@@ -18,8 +18,13 @@
         <br>
         <label class="nome">E-mail</label><br>
         <input class="input" type="email" name="email" id="email" placeholder="E-mail" onchange="validar()"><br><br>
+        <div class="error" id="emai_invalido">Email inválido</div>
+        <div class="error" id="email_obrigatorio">O campo email é obrigatorio</div>
         <label class="nome">Senha</label><br>
         <input class="input" type="password" name="senha" id="senha" placeholder="Senha" onchange="validar()"><br><br>
+        <div class="error" id="senha_invalido">Senha inválida</div>
+        <div class="error" id="senha_obrigatorio">O campo senha é obrigatorio</div>
+        <div class="error" id="seisCaracteres">O campo senha tem que ter Pelo menos 6 caraceres</div>
         <button class="button" type="submit" name="submit" id="btnEntrar" disabled="true">Entrar</button>
         <div class="esquecer">
             <button type="button" id="redefiniSenha" class="senha">Redefinir a senha</button>

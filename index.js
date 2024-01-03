@@ -12,24 +12,28 @@ function validate() {
 
     if(!email){
         document.getElementById("email_obrigatorio").style.display = "block";
+        btnSalvar.disabled = true;
     } else {
         document.getElementById("email_obrigatorio").style.display = "none";
     }
 
     if(email && !validateEmail(email)){
         document.getElementById("emai_invalido").style.display = "block";
+        btnSalvar.disabled = true;
     } else {
         document.getElementById("emai_invalido").style.display = "none";
     }
 
     if(confirmarsenha && senha !== confirmarsenha){
         document.getElementById("senhaEconfirmaSenha").style.display = "block";
+        btnSalvar.disabled = true;
     } else {
         document.getElementById("senhaEconfirmaSenha").style.display = "none";
     }
 
     if(senha && senha.length < 6){
         document.getElementById("seisCaracteres").style.display = "block";
+        btnSalvar.disabled = true;
     } else {
         document.getElementById("seisCaracteres").style.display = "none";
     }
@@ -44,5 +48,33 @@ function validar(){
         btnEntrar.disabled = true;
     } else {
         btnEntrar.disabled = false;
+    }
+
+    if(!email){
+        document.getElementById("email_obrigatorio").style.display = "block";
+        btnEntrar.disabled = true;
+    } else {
+        document.getElementById("email_obrigatorio").style.display = "none";
+    }
+
+    if(email && !validateEmail(email)){
+        document.getElementById("emai_invalido").style.display = "block";
+        btnEntrar.disabled = true;
+    } else {
+        document.getElementById("emai_invalido").style.display = "none";
+    }
+
+    if(!senha){
+        document.getElementById("senha_obrigatorio").style.display = "block";
+        btnEntrar.disabled = true;
+    } else {
+        document.getElementById("senha_obrigatorio").style.display = "none";
+    }
+
+    if(senha && senha.length < 6){
+        document.getElementById("seisCaracteres").style.display = "block";
+        btnEntrar.disabled = true;
+    } else {
+        document.getElementById("seisCaracteres").style.display = "none";
     }
 }
