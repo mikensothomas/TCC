@@ -17,10 +17,10 @@
         <br>
         <br>
         <label class="nome">E-mail</label><br>
-        <input class="input" type="email" name="email" id="email" placeholder="E-mail"><br><br>
+        <input class="input" type="email" name="email" id="email" placeholder="E-mail" onchange="validar()"><br><br>
         <label class="nome">Senha</label><br>
-        <input class="input" type="password" name="senha" id="senha" placeholder="Senha"><br><br>
-        <button class="button" type="submit" name="submit" id="btnEntrar">Entrar</button>
+        <input class="input" type="password" name="senha" id="senha" placeholder="Senha" onchange="validar()"><br><br>
+        <button class="button" type="submit" name="submit" id="btnEntrar" disabled="true">Entrar</button>
         <div class="esquecer">
             <button type="button" id="redefiniSenha" class="senha">Redefinir a senha</button>
         </div>
@@ -29,4 +29,6 @@
         </div>
     </form>
 </body>
+<script src="index.js"></script>
+<script src="validation.js"></script>
 </html>
