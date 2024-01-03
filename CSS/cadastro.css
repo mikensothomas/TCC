@@ -11,7 +11,7 @@ body {
     position: absolute;
     right: 40%;
     top: 20%;
-    padding: 80pt;
+    padding: 90pt;
     background-color: rgb(252, 250, 250);
     border-radius: 3%;
 }
@@ -47,36 +47,7 @@ body {
     border-radius: 15%;
 }
 
-.nome {
-    font-weight: 600;
-}
-.administrador{
-    font-weight: 600;
-    position: absolute;
-    top: 76%;
-}
-
-.adm{
-    position: absolute;
-    right: 20%;
-    top: 77%;
-}
-.nao{
-    position: absolute;
-    right: 24.7%;
-    top: 76.5%;
-}
-
-.adm1{
-    position: absolute;
-    right: 33%;
-    top: 77%;
-}
-.sim{
-    position: absolute;
-    right: 38%;
-    top: 76.5%;
-}
-.ja{
-    text-decoration-line: none;
+.error{
+    display: none;
+    color: red;
 }

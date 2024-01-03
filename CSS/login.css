@@ -14,7 +14,7 @@ body {
     padding: 70pt;
     background-color: rgb(252, 250, 250);
     border-radius: 3%;
-    height: 30%;
+    height: 31%;
 }
 
 .titulo {
@@ -57,15 +57,11 @@ body {
     top: 90%;
     right: 33%;
     cursor: pointer;
-}
-.mensage {
-    position: absolute;
-    top: 100%;
-    right: 33%; 
+    padding: 0.50pc;
 }
 .cadas{
     position: absolute;
-    top: 83%;
+    top: 80%;
     left: 33%;
     text-decoration-line: none;
 }

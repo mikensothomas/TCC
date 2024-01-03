@@ -6,11 +6,32 @@ function validate() {
 
     if (!email || !senha || !confirmarsenha || !validateEmail(email) || senha !== confirmarsenha) {
         btnSalvar.disabled = true;
-    } else if(senha.length < 6){
-        alert("A senha deve ter pelo menos 6 caracteres");
-        btnSalvar.disabled = true;
     } else {
         btnSalvar.disabled = false;
+    }
+
+    if(!email){
+        document.getElementById("email_obrigatorio").style.display = "block";
+    } else {
+        document.getElementById("email_obrigatorio").style.display = "none";
+    }
+
+    if(email && !validateEmail(email)){
+        document.getElementById("emai_invalido").style.display = "block";
+    } else {
+        document.getElementById("emai_invalido").style.display = "none";
+    }
+
+    if(confirmarsenha && senha !== confirmarsenha){
+        document.getElementById("senhaEconfirmaSenha").style.display = "block";
+    } else {
+        document.getElementById("senhaEconfirmaSenha").style.display = "none";
+    }
+
+    if(senha && senha.length < 6){
+        document.getElementById("seisCaracteres").style.display = "block";
+    } else {
+        document.getElementById("seisCaracteres").style.display = "none";
     }
 }
 
@@ -20,9 +41,6 @@ function validar(){
     const btnEntrar = document.getElementById("btnEntrar");
 
     if(!email || !senha || !validateEmail(email)){
-        btnEntrar.disabled = true;
-    } else if(senha.length < 6){
-        alert("A senha deve ter pelo menos 6 caracteres");
         btnEntrar.disabled = true;
     } else {
         btnEntrar.disabled = false;
