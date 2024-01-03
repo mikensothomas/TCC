@@ -78,3 +78,11 @@ function validar(){
         document.getElementById("seisCaracteres").style.display = "none";
     }
 }
+
+function login(){
+    window.location.href = "home/home.html";
+}
+
+function cadastrar(){
+    window.location.href = "login.html";
+}

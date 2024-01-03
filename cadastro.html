@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <form class="forme" action="login.html" method="POST">
+    <form class="forme" method="POST">
         <h2 class="titulo">Página de cadastro</h2>
         <br>
         <br>
@@ -25,11 +25,12 @@
         <label class="nome">Conferir a senha</label><br>
         <input class="input" type="password" name="conferirSenha" id="conferirSenha" placeholder="Conferir a senha" onchange="validate()"><br><br>
         <div class="error" id="senhaEconfirmaSenha">Os dois campos de senhas têm que ser iguais</div>
-        <button class="button" type="submit" id="btnSalvar" disabled="true" name="submit">Salvar</button>
+        <button class="button" type="button" id="btnSalvar" disabled="true" name="submit" onclick="cadastrar()">Salvar</button>
         <a href="login.html" class="voltar">Voltar</a>
     </form>
 </body>
 
 <script src="index.js"></script>
+<script src="login.html"></script>
 <script src="validation.js"></script>
 </html>
