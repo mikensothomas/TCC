@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/cadastro.css">
     <title>Plataforma online para ajudar estrangeiros haitianos</title>
 </head>
 
@@ -17,20 +15,21 @@
         <label class="nome">E-mail</label><br>
         <input class="input" type="email" name="email" id="email" placeholder="E-mail" onchange="validate()"><br><br>
         <div class="error" id="emai_invalido">Email inválido</div>
-        <div class="error" id="email_obrigatorio">O campo email é obrigatorio</div>
+        <div class="error" id="email_obrigatorio">O campo email é obrigatório</div>
         <label class="nome">Senha</label><br>
         <input class="input" type="password" name="senha" id="senha" placeholder="Senha" onchange="validate()"><br><br>
         <div class="error" id="seisCaracteres">A senha deve ter pelo menos 6 caracteres</div>
-        <div class="error">O campo senha é obrigatorio</div>
+        <div class="error" id="senha_obrigatoria">O campo senha é obrigatório</div>
         <label class="nome">Conferir a senha</label><br>
         <input class="input" type="password" name="conferirSenha" id="conferirSenha" placeholder="Conferir a senha" onchange="validate()"><br><br>
         <div class="error" id="senhaEconfirmaSenha">Os dois campos de senhas têm que ser iguais</div>
         <button class="button" type="button" id="btnSalvar" disabled="true" name="submit" onclick="cadastrar()">Salvar</button>
         <a href="login.html" class="voltar">Voltar</a>
     </form>
+
+    <link rel="stylesheet" href="CSS/cadastro.css">
+    <script src="index.js"></script>
+    <script src="validation.js"></script>
 </body>
 
-<script src="index.js"></script>
-<script src="login.html"></script>
-<script src="validation.js"></script>
 </html>

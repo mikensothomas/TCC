@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"></html>
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="CSS/login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plataforma online para ajudar estrangeiros haitianos</title>
-    <style>
-    </style>
 </head>
 
 <body>
@@ -24,7 +21,7 @@
         <input class="input" type="password" name="senha" id="senha" placeholder="Senha" onchange="validar()"><br><br>
         <div class="error" id="senha_invalido">Senha inválida</div>
         <div class="error" id="senha_obrigatorio">O campo senha é obrigatorio</div>
-        <div class="error" id="seisCaracteres">O campo senha tem que ter Pelo menos 6 caraceres</div>
+        <div class="error" id="seisCaracteres">O campo senha tem que ter pelo menos 6 caracteres</div>
         <button class="button" type="button" name="button" id="btnEntrar" disabled="true" onclick="login()">Entrar</button>
         <div class="esquecer">
             <button type="button" id="redefiniSenha" class="senha">Redefinir a senha</button>
@@ -33,29 +30,37 @@
             <a href="cadastro.html" class="cadas">Página de cadastro</a>
         </div>
     </form>
-</body>
-<script src="index.js"></script>
-<script src="cadastro.html"></script>
-<script src="validation.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
 
-<script>
-    const firebaseConfig = {
-        apiKey: "AIzaSyBWBaKi39cA7-8RlrQcGQ4aRvRWVHugtjo",
-        authDomain: "plataforma-online-tcc.firebaseapp.com",
-        projectId: "plataforma-online-tcc",
-        storageBucket: "plataforma-online-tcc.appspot.com",
-        messagingSenderId: "609402086727",
-        appId: "1:609402086727:web:8cea1df2be8895d8fbd862"
-    };
-    firebase.initializeApp(firebaseConfig);
-    console.log('Antes');
-    firebase.auth().signInWithEmailAndPassword("jsdhh@gmai.com", "123456").then(respons => {
-        console.log('success', respons)
-    }).catch(error => {
-        console.log('error', error)
-    });
-    console.log("Depois");
-</script>
+    <link rel="stylesheet" href="CSS/login.css">
+    <script src="index.js"></script>
+    <script src="validation.js"></script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDXk0kii5zSsB27QapWMaIuX2UKF9f-QIQ",
+            authDomain: "plataforma-online-ffa06.firebaseapp.com",
+            projectId: "plataforma-online-ffa06",
+            storageBucket: "plataforma-online-ffa06.appspot.com",
+            messagingSenderId: "1052614256053",
+            appId: "1:1052614256053:web:106eed5c3245aaf0e6a5fc"
+        };
+
+        const firebaseApp = initializeApp(firebaseConfig);
+        const auth = getAuth(firebaseApp);
+
+        signInWithEmailAndPassword(auth, "mikensonthomas2@gmail.com", "123456")
+        .then(response => {
+            console.log('success', response)
+        })
+        .catch(error => {
+            console.log('error', error)
+        });
+
+    </script>
+
+</body>
+
 </html>
