@@ -80,9 +80,21 @@ function validar(){
 }
 
 function login(){
-    window.location.href = "home/home.html";
+
+    firebase.auth().signInWithEmailAndPassword(form.email().value, form.senha().value)
+    .then(response => {
+        window.location.href = "home/home.html";
+    })
+    .catch(error => {
+        console.log('error', error)
+    });
 }
 
 function cadastrar(){
     window.location.href = "login.html";
 }
+
+const form = {
+    email: () => document.getElementById("email"),
+    senha: () => document.getElementById("senha"),
+} 

@@ -34,30 +34,20 @@
     <link rel="stylesheet" href="CSS/login.css">
     <script src="index.js"></script>
     <script src="validation.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
 
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-
+    <script>
         const firebaseConfig = {
-            apiKey: "AIzaSyDXk0kii5zSsB27QapWMaIuX2UKF9f-QIQ",
-            authDomain: "plataforma-online-ffa06.firebaseapp.com",
-            projectId: "plataforma-online-ffa06",
-            storageBucket: "plataforma-online-ffa06.appspot.com",
-            messagingSenderId: "1052614256053",
-            appId: "1:1052614256053:web:106eed5c3245aaf0e6a5fc"
+            apiKey: "AIzaSyCN15zgm_Pj2yrX2mIHbTRE2mV54aEjYX8",
+            authDomain: "projeto-tcc-cc.firebaseapp.com",
+            projectId: "projeto-tcc-cc",
+            storageBucket: "projeto-tcc-cc.appspot.com",
+            messagingSenderId: "572483506553",
+            appId: "1:572483506553:web:923eaa44ebec309c461fa8"
         };
 
-        const firebaseApp = initializeApp(firebaseConfig);
-        const auth = getAuth(firebaseApp);
-
-        signInWithEmailAndPassword(auth, "mikensonthomas2@gmail.com", "123456")
-        .then(response => {
-            console.log('success', response)
-        })
-        .catch(error => {
-            console.log('error', error)
-        });
+        firebase.initializeApp(firebaseConfig);
 
     </script>
 
