@@ -24,7 +24,7 @@
         <div class="error" id="seisCaracteres">O campo senha tem que ter pelo menos 6 caracteres</div>
         <button class="button" type="button" name="button" id="btnEntrar" disabled="true" onclick="login()">Entrar</button>
         <div class="esquecer">
-            <button type="button" id="redefiniSenha" class="senha">Redefinir a senha</button>
+            <button type="button" id="redefiniSenha" class="senha" disabled="true" onclick="recoverPassword()">Redefinir a senha</button>
         </div>
         <div class="cadastro">
             <a href="cadastro.html" class="cadas">Página de cadastro</a>
@@ -36,21 +36,9 @@
     <script src="validation.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
-
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyCN15zgm_Pj2yrX2mIHbTRE2mV54aEjYX8",
-            authDomain: "projeto-tcc-cc.firebaseapp.com",
-            projectId: "projeto-tcc-cc",
-            storageBucket: "projeto-tcc-cc.appspot.com",
-            messagingSenderId: "572483506553",
-            appId: "1:572483506553:web:923eaa44ebec309c461fa8"
-        };
-
-        firebase.initializeApp(firebaseConfig);
-
-    </script>
-
+    <script src="firebase_init.js"></script>
+    <script src="loading.js"></script>
+        
 </body>
 
 </html>
