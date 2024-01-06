@@ -73,13 +73,15 @@ function login(){
     firebase.auth().signInWithEmailAndPassword(form.email().value, form.senha().value)
     .then(response => {
         window.location.href = "home.html";
+        form.email().value = "";
+        form.senha().value = "";
     })
     .catch(error => {
         alert('Email ou senha inválido');
+        form.email().value = "";
+        form.senha().value = "";
     });
     hidLoading();
-    form.email().value = "";
-    form.senha().value = "";
 }
 
 function register(){
