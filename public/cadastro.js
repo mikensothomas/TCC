@@ -66,6 +66,10 @@ function cadastrar(){
     conferirSenha = "";
 }
 
+function back(){
+    window.location.href = "index.html";
+}
+
 const form = {
     email: () => document.getElementById('email'),
     senha: () => document.getElementById('senha'),

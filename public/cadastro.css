@@ -2,6 +2,17 @@
     margin: 0;
 }
 
+body{
+    background: rgb(45, 211, 111);
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .loading{
     background: rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -16,50 +27,47 @@
     font-size: 24px;
 }
 
-
-body {
-    background-image: url('drapo.jpeg');
-    background-repeat: repeat;
-}
-
 .forme {
     position: absolute;
     right: 40%;
     top: 20%;
     padding: 100pt;
-    background-color: rgb(252, 250, 250);
+    background-color: rgb(236, 219, 235);
     border-radius: 3%;
 }
-.voltar{
-    position: absolute;
-    top: 93%;
-    left: 48%;
-    text-decoration-line: none;
+.solid {
+    background: transparent;
+    color: rgb(28, 196, 13);
+    border: 1px solid white;
 }
+
+.nome {
+    font-weight: 600;
+}
+
+.input, button {
+    padding: 15px;
+    margin-bottom: 10px;
+    width: -webkit-fill-available;
+    cursor: pointer;
+ }
+
+
 .titulo {
     position: absolute;
     top: 15%;
+    color: rgba(1, 247, 55, 0.938);
+    font-size: 2pc
 }
 
 .input {
-    padding: 5%;
+    padding: 8px;
     outline: none;
 }
 
 .button {
-    width: 60%;
-    padding: 16px 0px;
-    margin: 25px;
-    border: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 3px;
-    cursor: pointer;
-    position: absolute;
-    right: 9%;
-    top: 76%;
-    background-color: rgb(183, 183, 218);
-    border-radius: 15%;
+    padding: 10px;
+    width: -webkit-fill-available;
 }
 
 .error{

@@ -68,8 +68,6 @@ function recoverPassword() {
     form.email().value = "";
 }
 
-
-
 function login(){
     showLoading();
     firebase.auth().signInWithEmailAndPassword(form.email().value, form.senha().value)
@@ -82,6 +80,10 @@ function login(){
     hidLoading();
     form.email().value = "";
     form.senha().value = "";
+}
+
+function register(){
+    window.location.href = "cadastro.html";
 }
 
 const form = {
