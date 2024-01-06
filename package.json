@@ -1,0 +1,29 @@
+{
+  "name": "tcc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikensothomas/TCC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikensothomas/TCC/issues"
+  },
+  "homepage": "https://github.com/mikensothomas/TCC#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "firebase": "^10.7.1",
+    "moment": "^2.30.1",
+    "socket.io": "^4.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

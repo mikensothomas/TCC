@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma online para ajudar estrangeiros haitianos</title>
+</head>
+
+<body>
+    <form class="forme" id="formulario_login" method="POST">
+        <h2 class="titulo">Página de login</h2>
+        <br>
+        <br>
+        <label class="nome">E-mail</label><br>
+        <input class="input" type="email" name="email" id="email" placeholder="E-mail" onchange="validar()"><br><br>
+        <div class="error" id="emai_invalido">Email inválido</div>
+        <div class="error" id="email_obrigatorio">O campo email é obrigatorio</div>
+        <label class="nome">Senha</label><br>
+        <input class="input" type="password" name="senha" id="senha" placeholder="Senha" onchange="validar()"><br><br>
+        <div class="error" id="senha_invalido">Senha inválida</div>
+        <div class="error" id="senha_obrigatorio">O campo senha é obrigatorio</div>
+        <div class="error" id="seisCaracteres">O campo senha tem que ter pelo menos 6 caracteres</div>
+        <button class="button" type="button" name="button" id="btnEntrar" disabled="true" onclick="login()">Entrar</button>
+        <div class="esquecer">
+            <button type="button" id="redefiniSenha" class="senha" disabled="true" onclick="recoverPassword()">Redefinir a senha</button>
+        </div>
+        <div class="cadastro">
+            <a href="cadastro.html" class="cadas">Página de cadastro</a>
+        </div>
+    </form>
+
+    <link rel="stylesheet" href="login.css">
+    <script src="index.js"></script>
+    <script src="validation.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="firebase_init.js"></script>
+    <script src="loading.js"></script>
+        
+</body>
+
+</html>
