@@ -1,3 +1,9 @@
+/*firebase.auth().onAuthStateChanged(function(user){
+    if(user){
+        window.location.href = "home.html";
+    }
+})*/
+
 function pegarErroMensagem(error){
     if(error.code == "auth/user-not-found"){
         return "Email não encntrado";
