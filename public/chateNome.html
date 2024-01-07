@@ -12,24 +12,20 @@
         <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
         <script src="firebase_init.js"></script>
         <script src="auth-gard.js"></script>
-        <link href="estilo.css" rel="stylesheet" />
+        <link href="estilo.css" rel="stylesheet"/>
     </head>
 
     <body>
         <div class="container">
-            <h3 class="titulo-login">Seja bem vindo ao Curso de JavaScript e NodeJS</h3>
+            <h3 class="titulo-login">Bem vindos à nosso plataforma</h3>
             <div class="mb-3 input-entrar">
-                <label for="exampleFormControlInput1" class="form-label">Digite seu Nome e Sobrenome</label>
-                <input type="text" class="form-control" id="nome" placeholder="Nome Sobrenome">
+                <label for="exampleFormControlInput1" class="form-label">Digite seu nome ou Sobrenome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Nome ou Sobrenome">
             </div>
-            <div>
-                <a href="chat.html" id="btnEntrar" class="btn btn-success">Entrar</a>
-            </div>
-            <br>
-            <div>
-                <a href="index.html" id="btnEntrar" class="btn btn-success">Voltar</a>
-            </div>
+            <button type="button" id="btnEntrar" class="btn btn-success" onclick="entrar()">Entrar</button>
+            <button type="button" id="btnEntrar" class="btn btn-success" onclick="voltar()">Voltar</button>
         </div>
+        <script src="chat.js"></script>
     </body>
 
 </html>
