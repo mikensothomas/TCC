@@ -7,6 +7,19 @@ function entrar(){
     }
 }
 
+function digitar_mensagem() {
+    const quadroMensagem = document.getElementById("quadro-mesnsagem");
+    const enviarMensagem = document.getElementById("enviarMensagem").value;
+
+    const li = document.createElement('li');
+    li.innerText = enviarMensagem;
+
+    quadroMensagem.appendChild(li);
+
+    document.getElementById("enviarMensagem").value = "";
+}
+
+
 function voltar(){
     window.location.href = "index.html";
 }
