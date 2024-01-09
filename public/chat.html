@@ -16,6 +16,7 @@
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
     <script src="firebase_init.js"></script>
     <script src="auth-gard.js"></script>
+    <script src="chat.js"></script>
 </head>
 
 <body>
@@ -24,28 +25,7 @@
             <div class="col-lg-12">
                 <div class="card chat-app">
                     <div id="plist" class="people-list">
-                        <ul class="list-unstyled chat-list mt-2 mb-0" id="listaUsuarios">
-                            <li class="clearfix">
-                                <div class="about">
-                                    <div class="name">Gustavo</div>
-                                    <div class="status"> <i class="fa fa-circle online"></i> online </div>
-                                </div>
-                            </li>
-                            
-                            <li class="clearfix">
-                                <div class="about">
-                                    <div class="name">Gabriele</div>
-                                    <div class="status"> <i class="fa fa-circle online"></i> online </div>
-                                </div>
-                            </li>
-                   
-                            <li class="clearfix">
-                                <div class="about">
-                                    <div class="name">Tayná</div>
-                                    <div class="status"> <i class="fa fa-circle online"></i> online </div>
-                                </div>
-                            </li>
-                        </ul>
+                        <ul id="poeple"></ul>
                     </div>
                     <div class="chat" id="chat">
                         <div class="chat-header clearfix">
@@ -71,14 +51,13 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa fa-send"></i></span>
                             </div>
-                            <input type="text" id="enviarMensagem" class="form-control" onchange="digitar_mensagem()" placeholder="Digite sua mensagem...">
+                            <input type="text" id="enviarMensagem" class="form-control" onclick="digitar_mensagem()" placeholder="Digite sua mensagem...">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="chat.js"></script>
 </body>
 
 </html>

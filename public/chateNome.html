@@ -13,6 +13,7 @@
         <script src="firebase_init.js"></script>
         <link href="estilo.css" rel="stylesheet"/>
         <script src="auth-gard.js"></script>
+        <script src="chat.js"></script>
     </head>
 
     <body>
@@ -20,12 +21,11 @@
             <h3 class="titulo-login">Bem vindos à nossa plataforma</h3>
             <div class="mb-3 input-entrar">
                 <label for="exampleFormControlInput1" class="form-label">Digite seu nome ou Sobrenome</label>
-                <input type="text" class="form-control" id="nome" placeholder="Nome ou Sobrenome">
+                <input type="text" class="form-control" id="nome" oncanplay="digite_nome()" placeholder="Nome ou Sobrenome">
             </div>
             <button type="button" id="btnEntrar" class="btn btn-success" onclick="entrar()">Entrar</button>
             <button type="button" id="btnEntrar" class="btn btn-success" onclick="voltar()">Voltar</button>
         </div>
-        <script src="chat.js"></script>
     </body>
 
 </html>

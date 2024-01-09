@@ -4,6 +4,7 @@ function entrar(){
         alert("Por favor preencha o campo nome");
     } else {
         window.location.href = "chat.html";
+        digite_nome();
     }
 }
 
@@ -19,6 +20,18 @@ function digitar_mensagem() {
     document.getElementById("enviarMensagem").value = "";
 }
 
+function digite_nome() {
+    const nomeElement = document.getElementById("nome");
+    const people = document.getElementById("poeple");
+  
+    const nome = nomeElement.value;
+  
+    const li = document.createElement('li');
+    li.innerText = nome;
+  
+    people.appendChild(li);
+}
+  
 
 function voltar(){
     window.location.href = "index.html";
