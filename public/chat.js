@@ -39,7 +39,6 @@ function atualizarListaDeNome() {
       bolinhaSpan.className = "bolinha";
       palavraElement.appendChild(bolinhaSpan);
   
-      // Adicione a classe green-text à <p> que contém a palavra "online"
       const onlineText = document.createElement("span");
       onlineText.textContent = " online";
       onlineText.className = "green-text";
