@@ -47,13 +47,6 @@ function validar(){
         document.getElementById("emai_invalido").style.display = "none";
     }
 
-    if(!senha){
-        document.getElementById("senha_obrigatorio").style.display = "block";
-        btnEntrar.disabled = true;
-    } else {
-        document.getElementById("senha_obrigatorio").style.display = "none";
-    }
-
     if(senha && senha.length < 6){
         document.getElementById("seisCaracteres").style.display = "block";
         btnEntrar.disabled = true;
