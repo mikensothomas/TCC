@@ -1,30 +1,41 @@
-function entrar(){
+function entrar() {
     const nomes = document.getElementById("nomes").value;
-    if(!nomes){
+    if (!nomes) {
         alert("Por favor preencha o campo nome");
     } else {
-        const nomeArmazenado = JSON.parse(localStorage.getItem('nomes')) || [];
-        nomeArmazenado.push(nomes);
-        localStorage.setItem('nomes', JSON.stringify(nomeArmazenado));
-        document.getElementById("nomes").value = "";
-        atualizarListaDeNome();
-        window.location.href = "chat.html";
+        digite_nome(nomes);
+        // Restante do seu código...
     }
 }
 
-function atualizarListaDeNome(){
+function digite_nome(nomes) {
+    const nomeReceive = nomes;
+
+    let nomesArmazenados = JSON.parse(localStorage.getItem('nomes')) || [];
+
+    nomesArmazenados.push(nomeReceive);
+
+    localStorage.setItem('nomes', JSON.stringify(nomesArmazenados));
+    window.location.href = "chat.html";
+}
+
+function exibir_pessoas_online() {
+    let nomesArmazenados = JSON.parse(localStorage.getItem('nomes')) || [];
+
+    console.log("Pessoas Online:", nomesArmazenados);
+}
+
+function atualizarListaDeNome() {
     const nomesArmazenados = JSON.parse(localStorage.getItem('nomes')) || [];
     const listaNome = document.getElementById("pessoa");
     listaNome.innerHTML = "";
 
-    nomesArmazenados.forEach(function(nomes) {
+    nomesArmazenados.forEach(function (nomes) {
         const li = document.createElement('li');
         li.textContent = nomes;
         listaNome.appendChild(li);
     });
 }
-
-atualizarListaDeNome();
 
 function digitar_mensagem() {
     const quadroMensagem = document.getElementById("quadro-mesnsagem");
@@ -37,11 +48,15 @@ function digitar_mensagem() {
 
     document.getElementById("enviarMensagem").value = "";
 }
-  
-function voltar(){
+
+function voltar() {
     window.location.href = "index.html";
 }
 
-function sair(){
+function sair() {
     window.location.href = "chateNome.html";
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    atualizarListaDeNome();
+});
