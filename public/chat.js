@@ -29,13 +29,23 @@ function atualizarListaDeNome() {
     const nomesArmazenados = JSON.parse(localStorage.getItem('nomes')) || [];
     const listaNome = document.getElementById("pessoa");
     listaNome.innerHTML = "";
-
-    nomesArmazenados.forEach(function (nomes) {
-        const li = document.createElement('li');
-        li.textContent = nomes;
-        listaNome.appendChild(li);
+  
+    nomesArmazenados.forEach(function (nome) {
+      const li = document.createElement('li');
+      li.textContent = nome;
+      const palavraElement = document.createElement("p");
+      const bolinhaSpan = document.createElement("span");
+      bolinhaSpan.className = "bolinha";
+      palavraElement.appendChild(bolinhaSpan);
+      palavraElement.innerHTML += " online";
+      li.appendChild(palavraElement);
+      listaNome.appendChild(li);
     });
-}
+  }
+  document.head.innerHTML += '<style>.green-text { color: green; }</style>';
+  document.head.innerHTML += '<style>#pessoa { list-style-type: none; padding: 0; margin: 0; }</style>';
+  document.head.innerHTML += '<style>.bolinha { display: inline-block; width: 8px; height: 8px; background-color: green; border-radius: 50%; margin-left: 5px; margin-right: 2px; }</style>';
+
 
 function digitar_mensagem() {
     const quadroMensagem = document.getElementById("quadro-mesnsagem");
