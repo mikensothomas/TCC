@@ -47,11 +47,6 @@ function digitar_mensagem() {
     const quadroMensagem = document.getElementById('quadro-mesnsagem');
     const nome = JSON.parse(localStorage.getItem('nomes'))[0];
 
-    if (!nome) {
-        alert("Por favor, entre no chat primeiro");
-        return;
-    }
-
     const li = document.createElement('li');
     li.className = 'chat-message';
 
@@ -79,8 +74,9 @@ function pegarData() {
     let data = new Date();
     let horas = data.getHours();
     let minutos = data.getMinutes();
+    let horaFormatado = horas.toString().padStart(2, '0');
     let minutosFormatados = minutos.toString().padStart(2, '0');
-    let resultado = `${horas}:${minutosFormatados} - ${data.toLocaleDateString()}`;
+    let resultado = `${horaFormatado}:${minutosFormatados} - ${data.toLocaleDateString()}`;
     return resultado;
 }
 
