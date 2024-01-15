@@ -297,3 +297,42 @@ body{
     font-size: 12px;
     color: #999;
   }
+
+  .green-text {
+    color: green;
+}
+
+#pessoa {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bolinha {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: green;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 2px;
+}
+
+.chat-message {
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.message-text {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.message-date {
+    font-size: 12px;
+    color: #888;
+}
