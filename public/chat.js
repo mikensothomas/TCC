@@ -24,9 +24,9 @@ function atualizarListaDeNome() {
     const listaNome = document.getElementById("pessoa");
     listaNome.innerHTML = "";
   
-    nomesArmazenados.forEach(function (nome) {
+    nomesArmazenados.forEach(function (nomes) {
       const li = document.createElement('li');
-      li.textContent = nome;
+      li.textContent = nomes;
   
       const palavraElement = document.createElement("p");
       const bolinhaSpan = document.createElement("span");
