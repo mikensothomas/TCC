@@ -54,30 +54,33 @@ function atualizarListaDeNome() {
   document.head.innerHTML += '<style>.bolinha { display: inline-block; width: 8px; height: 8px; background-color: green; border-radius: 50%; margin-left: 5px; margin-right: 2px; }</style>';
   
 
+
 function digitar_mensagem() {
-    const quadroMensagem = document.getElementById("quadro-mesnsagem");
-    const enviarMensagem = document.getElementById("enviarMensagem").value;
-
+    const enviarMensagem = document.getElementById('enviarMensagem').value;
+    const quadroMensagem = document.getElementById('quadro-mesnsagem');
     const li = document.createElement('li');
-    li.innerText = [enviarMensagem, pegarDataAtual()];
-
+    li.className = 'chat-message'; // Adicione a classe 'chat-message'
+        
+    const textDiv = document.createElement('div');
+    textDiv.className = 'message-text';
+    textDiv.innerText = enviarMensagem;
+        
+    const dateDiv = document.createElement('div');
+    dateDiv.innerText = pegarDataAtual();
+    dateDiv.className = 'message-date';
+     
+    li.appendChild(dateDiv);
+    li.appendChild(textDiv);
+    
     quadroMensagem.appendChild(li);
-
-    document.getElementById("enviarMensagem").value = "";
+    document.getElementById('enviarMensagem').value = "";
 }
 
-function pegarDataAtual(){
-    var dataAtual = new Date();
-    var dia = (dataAtual.getDate()<10 ? "0" : "") + dataAtual.getDate();
-    var mes = ((dataAtual.getMonth() + 1)<10 ? "0" : "") + (dataAtual.getMonth() + 1);
-    var ano = dataAtual.getFullYear();
-    var hora = (dataAtual.getHours()<10 ? "0" : "") + dataAtual.getHours();
-    var minuto = (dataAtual.getMinutes()<10 ? "0" : "") + dataAtual.getMinutes();
-    var segundo = (dataAtual.getSeconds()<10 ? "0" : "") + dataAtual.getSeconds();
-  
-    var dataFormatada = dia + "/" + mes + "/" + ano + " " + hora + ":" + minuto + ":" + segundo;
-    return dataFormatada;
-}
+function pegarDataAtual() {
+    const data = new Date();
+    return `${data.getHours()}:${data.getMinutes()} - ${data.toLocaleDateString()}`;
+  }
+
 
 function voltar() {
     window.location.href = "index.html";
