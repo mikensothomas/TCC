@@ -60,7 +60,7 @@ function digitar_mensagem() {
     textDiv.innerText = enviarMensagem;
         
     const dateDiv = document.createElement('div');
-    dateDiv.innerText = pegarDataAtual();
+    dateDiv.innerText = pegarData();
     dateDiv.className = 'message-date';
     
     li.appendChild(dateDiv);
@@ -70,10 +70,14 @@ function digitar_mensagem() {
     document.getElementById('enviarMensagem').value = "";
 }
 
-function pegarDataAtual() {
-    const data = new Date();
-    return `${data.getHours()}:${data.getMinutes()} - ${data.toLocaleDateString()}`;
-  }
+function pegarData(){
+    let data = new Date();
+    let horas = data.getHours();
+    let minutos = data.getMinutes();
+    let minutosFormatados = minutos.toString().padStart(2, '0');
+    let resultado = `${horas}:${minutosFormatados} - ${data.toLocaleDateString()}`;
+    return resultado;
+}
 
 
 function voltar() {
