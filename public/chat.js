@@ -19,12 +19,6 @@ function digite_nome(nomes) {
     window.location.href = "chat.html";
 }
 
-function exibir_pessoas_online() {
-    let nomesArmazenados = JSON.parse(localStorage.getItem('nomes')) || [];
-
-    console.log("Pessoas Online:", nomesArmazenados);
-}
-
 function atualizarListaDeNome() {
     const nomesArmazenados = JSON.parse(localStorage.getItem('nomes')) || [];
     const listaNome = document.getElementById("pessoa");
@@ -68,7 +62,7 @@ function digitar_mensagem() {
     const dateDiv = document.createElement('div');
     dateDiv.innerText = pegarDataAtual();
     dateDiv.className = 'message-date';
-     
+    
     li.appendChild(dateDiv);
     li.appendChild(textDiv);
     
