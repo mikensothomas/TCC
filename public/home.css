@@ -11,8 +11,35 @@ body{
     border: none;
     color: rgb(242, 238, 245);
     cursor: pointer;
-    font-size: 25px;
+    font-size: 20px;
     float: right;
+}
+
+.chat{
+    color: rgb(242, 238, 245);
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration-line: none;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagem{
+    display: flex;
+    justify-content: space-between;
+    padding: 10em;
+}
+
+.imagem, img{
+    border-radius: 10000px;
+}
+
+footer, p, a{
+    text-decoration-line: none;
+    color: rgb(242, 238, 245);
 }
 
 .loading{
