@@ -53,7 +53,7 @@ function digitar_mensagem() {
     const enviarMensagem = document.getElementById('enviarMensagem').value;
     const quadroMensagem = document.getElementById('quadro-mesnsagem');
     const li = document.createElement('li');
-    li.className = 'chat-message'; // Adicione a classe 'chat-message'
+    li.className = 'chat-message';
         
     const textDiv = document.createElement('div');
     textDiv.className = 'message-text';
