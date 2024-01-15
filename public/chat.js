@@ -4,7 +4,6 @@ function entrar() {
         alert("Por favor preencha o campo nome");
     } else {
         digite_nome(nomes);
-        // Restante do seu código...
     }
 }
 
