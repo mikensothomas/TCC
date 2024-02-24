@@ -1,6 +1,6 @@
 /*
 
-Este comando é para rodar o prgrama
+Este comando é para rodar o programa
 
 npm run dev
 
